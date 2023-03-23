@@ -1,4 +1,4 @@
-/*guessing game: Guess the secret word. You have three tries.*/
+#guessing game: Guess the secret word. You have three tries.
 
 secret_word = "Apple"
 guess = ""

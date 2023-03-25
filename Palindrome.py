@@ -1,4 +1,4 @@
-/*This is a small python program that checks whether a string is a palindrome or not.*/
+#This is a small python program that checks whether a string is a palindrome or not.
 
 def reversestr(str):
     return str[::-1]

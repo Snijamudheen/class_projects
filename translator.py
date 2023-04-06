@@ -1,5 +1,5 @@
-/*This is a small secret language developed with python language that converts vowels into the alphabet 'r'.
-For example: apple --> rpplr door --> drrr*/
+#This is a small secret language developed with python language that converts vowels into the alphabet 'r'.
+#For example: apple --> rpplr door --> drrr
 
 def translate(phrase):
 

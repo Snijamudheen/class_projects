@@ -1,13 +1,13 @@
-# Write a program that allows two players (player X and player O) to play a game of tic-tac-toe. 
-# Use a two- dimensional char array with three rows and three columns as the game board. Each element of the array should be initialized with an asterisk (*). 
-# The players take turns making moves and the program keeps track of whose turn it is. Player X moves first. The program should run a loop that:
-# Displays the contents of the board array (see prompts and output, below).
-# Prompts and allows the player whose turn it is to select a location on the board for an X in the case of player X or an O in the case of player O. 
-# The program should ask the player to enter the row and column number. Valid row or column numbers are 1, 2, or 3.
-# The loop terminates when a player has won, or a tie has occurred. If a player has won, the program should declare that player the winner and end. 
-# If a tie has occurred, the program should say so and end.
-# Player X (O) wins when there are three Xs (three Os) in a row on the game board. The Xs (Os) can appear in a row, in a column, or diagonally across the board.
-# A tie occurs when all of the locations on the board are full, but there is no winner.
+/*Write a program that allows two players (player X and player O) to play a game of tic-tac-toe. 
+Use a two- dimensional char array with three rows and three columns as the game board. Each element of the array should be initialized with an asterisk (*). 
+The players take turns making moves and the program keeps track of whose turn it is. Player X moves first. The program should run a loop that:
+Displays the contents of the board array (see prompts and output, below).
+Prompts and allows the player whose turn it is to select a location on the board for an X in the case of player X or an O in the case of player O. 
+The program should ask the player to enter the row and column number. Valid row or column numbers are 1, 2, or 3.
+The loop terminates when a player has won, or a tie has occurred. If a player has won, the program should declare that player the winner and end. 
+If a tie has occurred, the program should say so and end.
+Player X (O) wins when there are three Xs (three Os) in a row on the game board. The Xs (Os) can appear in a row, in a column, or diagonally across the board.
+A tie occurs when all of the locations on the board are full, but there is no winner.*/
 
 #include <iostream>
 using namespace std;

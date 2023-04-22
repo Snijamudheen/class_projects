@@ -1,4 +1,4 @@
-A small python program that calculates the sum of n natural numbers.
+#A small python program that calculates the sum of n natural numbers.
 
 n = int(input("Enter a natural number: "))
 

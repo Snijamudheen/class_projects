@@ -12,7 +12,8 @@ int main()
 
     cout << "reading" << endl;
 
-    while(!infile.eof()){
+    while(!infile.eof())
+    {
         infile >> ch.readline();
         cout << ch << endl;
     }

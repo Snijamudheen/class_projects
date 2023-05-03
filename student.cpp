@@ -7,7 +7,8 @@
 #include <cstring>
 using namespace std;
 
-struct StudentGrade {
+struct StudentGrade 
+{
 	string sname[100];
 	double gradescore[100][6];
 	char lettergrade[100];
@@ -19,8 +20,8 @@ void calculateAverage(StudentGrade& sg, int& count);
 void printScore(StudentGrade& sg, int& count);
 
 //calculates letter grade 
-char calculateGrade(double courseAverage) {
-
+char calculateGrade(double courseAverage) 
+{
 	if (courseAverage >= 90.0)
 		return 'A';
 	else if (courseAverage >= 80.0)
@@ -31,42 +32,35 @@ char calculateGrade(double courseAverage) {
 		return 'D';
 	else
 		return 'F';
-
-
 }
 
 //calculates average
-void calculateAverage(StudentGrade& sg, int& count) {
+void calculateAverage(StudentGrade& sg, int& count) 
+{
 
 	ifstream fRead;
-
 	fRead.open("cosc1437ggrade.txt");
 
-	if (!fRead) {
-
+	if (!fRead) 
+	{
 		cout << "\n ERROR : Unable to open the file for reading.";
 		exit(0);
 	}
 
-	while (!fRead.eof()) {
-
+	while (!fRead.eof())
+	{
 		double courseAverage = 0.0;
-
-
 		fRead >> sg.sname[count];
 
-		for (int c = 0; c < 5; c++) {
+		for (int c = 0; c < 5; c++) 
+		{
 			fRead >> sg.gradescore[count][c];
-
 			courseAverage += sg.gradescore[count][c];
 		}
 
 		courseAverage = courseAverage / 5.0;
-
 		sg.gradescore[count][5] = courseAverage;
-
 		sg.lettergrade[count] = calculateGrade(courseAverage);
-
 		count++;
 	}
 
@@ -75,40 +69,37 @@ void calculateAverage(StudentGrade& sg, int& count) {
 
 
 //prints the score
-void printScore(StudentGrade& sg, int& count) {
+void printScore(StudentGrade& sg, int& count) 
+{
 	double classTotal = 0.0;
 
 	cout << left << setw(12) << "Student"
-		<< left << setw(8) << "Test1" << left << setw(8)
-		<< "Test2" << left << setw(8) << "Test3"
-		<< left << setw(8) << "Test4" << left << setw(8)
-		<< "Test5" << left << setw(10) << "Average"
-		<< left << setw(8) << "Grade" << endl;
+	<< left << setw(8) << "Test1" << left << setw(8)
+	<< "Test2" << left << setw(8) << "Test3"
+	<< left << setw(8) << "Test4" << left << setw(8)
+	<< "Test5" << left << setw(10) << "Average"
+	<< left << setw(8) << "Grade" << endl;
 
-	for (int c = 0; c < count-1; c++) {
+	for (int c = 0; c < count-1; c++) 
+	{
 		cout << left << setw(12) << sg.sname[c];
 
 		for (int d = 0; d < 5; d++)
-			cout << left << setw(8) << sg.gradescore[c][d];
-
+		      cout << left << setw(8) << sg.gradescore[c][d];
+		      
 		cout << left << setw(10) << sg.gradescore[c][5];
-
 		cout << left << setw(8) << sg.lettergrade[c] << endl;
-
 		classTotal += sg.gradescore[c][5];
 	}
-
 }
 
-
-int main() {
-
+int main() 
+{
 	StudentGrade sg;
 	int count = 0;
-
+	
 	//function call
 	calculateAverage(sg, count);
-
 	printScore(sg, count);
 	return 0;
 }

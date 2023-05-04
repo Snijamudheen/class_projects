@@ -3,15 +3,16 @@
 #include <iostream>
 using namespace std;
 
-int main () {
-
+int main () 
+{
 	int grade;
 	int count[6] = {0};
   
 	cout << "Enter student's grade 0-5 or outside this range to end: ";
 	cin >> grade;
   
-	while (0 <= grade && grade <= 5) {
+	while (0 <= grade && grade <= 5) 
+	{
 		count[grade]++;
 		cout << "Enter student's grade 0-5 or outside this range to end:";
 		cin >> grade;

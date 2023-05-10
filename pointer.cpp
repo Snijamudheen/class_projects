@@ -3,8 +3,8 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-
+int main()
+{
     int x = 25;
     int *ptr = nullptr; //nullptr is address 0
                         //ptr is the name of the pointer variable
@@ -14,5 +14,4 @@ int main(){
     cout << "The address of x is " << ptr << endl;
 
     system("pause");
-
 }

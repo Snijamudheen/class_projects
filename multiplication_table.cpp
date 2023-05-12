@@ -13,7 +13,8 @@ int main()
     cout << "Enter range: ";
     cin >> range;
     
-    for (int i = 1; i <= range; ++i) {
+    for (int i = 1; i <= range; ++i) 
+    {
         cout << n << " * " << i << " = " << n * i << endl;
     }
     

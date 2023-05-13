@@ -7,28 +7,26 @@ using namespace std;
 
 int main()
 {
-    ifstream inputFile;
+	ifstream inputFile;
 	int number;
-	
+
 	inputFile.open("People.txt");	
 	cout << "PRAIRIEVILLE POPULATION GROWTH\n" << "(each * represents 1000 people)\n";	
-	
-	for (int y = 1900; y <= 2000; y += 20){
-	
+
+	for (int y = 1900; y <= 2000; y += 20)
+	{
 		cout << y << ' ';     
 		inputFile >> number;
-		
-		for (int i = 0; i < number; i += 1000){
-		
-			cout << '*';
-			
+
+		for (int i = 0; i < number; i += 1000)
+		{
+			cout << '*';	
 		}
-		
 		cout << endl;
 	}
-	
+
 	inputFile.close();		
 	system("pause");
-	
+
 	return 0;
 }

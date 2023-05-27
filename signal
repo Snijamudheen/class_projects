@@ -1,4 +1,4 @@
-/*A python program that displays instructions associated with each color of the traffic light.*/
+#A python program that displays instructions associated with each color of the traffic light.
 
 def trafficlight():
 
